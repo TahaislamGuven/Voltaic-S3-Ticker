@@ -16,7 +16,7 @@ Name it (e.g., Benchmark Marquee) → Click OK.
 
 In the URL field, put the local path  index.html:
 
-file:///C:/path/to/index.html
+Example: file:///C:/path/to/index.html
 
 
 Set width and height to match your layout.
