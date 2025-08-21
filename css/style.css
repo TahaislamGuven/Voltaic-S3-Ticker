@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+  transform: translateX(100%); /* start fully off-screen */
+}
+
+
+.scenario {
+  margin-right: 10px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: black; 
+  display: inline-block;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
