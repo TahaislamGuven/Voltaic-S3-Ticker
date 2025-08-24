@@ -1,7 +1,7 @@
 const steamId = ""; // steamID goes here
 const benchmarkId = 266;
-const SPEED = 40;     // seconds per full scroll
-const SEAMLESS = false; // toggle seamless
+const SPEED = 80;     // seconds per full scroll
+const SEAMLESS = true; // toggle seamless
 const DELAY = 30000;      // milliseconds to wait after each loop (non-seamless)
 
 
@@ -36,13 +36,13 @@ const thresholds = [
 ];
 
 const rankColors = {
-  "Below Jade": "#444444",
+  "Below Jade": "#b1b1b1ff",
   "Jade": "#B6F8B6",
   "Master": "#E7B4F0",
   "Grandmaster": "#FFE791",
   "Nova": "#D2A2FF",
   "Astra": "#FF9DB1",
-  "Celestial": "#FFFFFF"
+  "Celestial": "#353333ff"
 };
 
 function getRank(score, threshold) {
@@ -80,17 +80,21 @@ async function loadData() {
       const scenario = allScenarios[name];
       if (!scenario) return;
 
+
+
       const score = scenario.score;
       const rank = getRank(score, thresholds[index]);
       const color = rankColors[rank] || "#888";
       const scoreText = formatScore(score);
 
+
+
       const span = document.createElement("span");
       span.className = "scenario";
       span.style.background = color;
-      span.style.color = "#000";
+      span.style.color = rank === "Celestial" ? "#fff" : "#000";
+      span.style.border = "2px solid";
       span.textContent = `${name}: ${scoreText} (${rank})`;
-
       fragment.appendChild(span);
     });
 
