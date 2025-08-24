@@ -1,4 +1,6 @@
 
+Add steamID in script.js
+
     Settings in script.js file
 Scroll speed: Change the SPEED variable.
 
@@ -12,7 +14,7 @@ Open OBS Studio.
 
 Click the + in the Sources panel → Browser.
 
-Name it (e.g., Benchmark Marquee) → Click OK.
+Name it (e.g., Benchmark) → Click OK.
 
 In the URL field, put the local path  index.html:
 
